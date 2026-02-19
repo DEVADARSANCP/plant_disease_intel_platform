@@ -1,19 +1,22 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLeaf } from '@fortawesome/free-solid-svg-icons';
+import {
+    faLeaf, faHouse, faChartLine, faUsers, faCode,
+    faRobot, faVirus, faSeedling
+} from '@fortawesome/free-solid-svg-icons';
 
 const topNavItems = [
-    { id: 'home', label: 'Home Dashboard', icon: '⊕' },
+    { id: 'home', label: 'Home Dashboard', icon: faHouse },
 ];
 
 const featureNavItems = [
-    { id: 'market', label: 'Market Intelligence', icon: '↗' },
-    { id: 'community', label: 'Community', icon: '👥' },
-    { id: 'dev-planner', label: 'Dev Planner', icon: '📖' },
-    { id: 'ai-assistant', label: 'AI Assistant', icon: '🤖' },
-    { id: 'dashboard', label: 'Outbreak Analysis', icon: '🧬' },
-    { id: 'crop-planning', label: 'Crop Planning', icon: '🌱' },
-    // { id: 'roi-calculator', label: 'ROI Calculator', icon: '🧮' },
-    //{ id: 'econ-dashboard', label: 'Econ Dashboard', icon: '⊕' },
+    { id: 'market', label: 'Market Intelligence', icon: faChartLine },
+    { id: 'community', label: 'Community', icon: faUsers },
+    { id: 'dev-planner', label: 'Dev Planner', icon: faCode },
+    { id: 'ai-assistant', label: 'AI Assistant', icon: faRobot },
+    { id: 'dashboard', label: 'Outbreak Analysis', icon: faVirus },
+    { id: 'crop-planning', label: 'Crop Planning', icon: faSeedling },
+    // { id: 'roi-calculator', label: 'ROI Calculator', icon: faCalculator },
+    // { id: 'econ-dashboard', label: 'Econ Dashboard', icon: faChartPie },
 ];
 
 export default function Sidebar({ activeNav, onNavChange }) {
@@ -32,7 +35,7 @@ export default function Sidebar({ activeNav, onNavChange }) {
                         className={`nav-item ${activeNav === item.id ? 'active' : ''}`}
                         onClick={() => onNavChange(item.id)}
                     >
-                        <span className="nav-icon">{item.icon}</span>
+                        <span className="nav-icon"><FontAwesomeIcon icon={item.icon} /></span>
                         <span>{item.label}</span>
                     </div>
                 ))}
@@ -45,7 +48,7 @@ export default function Sidebar({ activeNav, onNavChange }) {
                         className={`nav-item ${activeNav === item.id ? 'active' : ''}`}
                         onClick={() => onNavChange(item.id)}
                     >
-                        <span className="nav-icon">{item.icon}</span>
+                        <span className="nav-icon"><FontAwesomeIcon icon={item.icon} /></span>
                         <span>{item.label}</span>
                     </div>
                 ))}
