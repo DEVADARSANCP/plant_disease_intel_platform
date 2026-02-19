@@ -9,16 +9,16 @@ const featureNavItems = [
     { id: 'ai-assistant', label: 'AI Assistant', icon: '🤖' },
     { id: 'dashboard', label: 'Outbreak Analysis', icon: '🧬' },
     { id: 'crop-planning', label: 'Crop Planning', icon: '🌱' },
-    { id: 'roi-calculator', label: 'ROI Calculator', icon: '🧮' },
-    { id: 'econ-dashboard', label: 'Econ Dashboard', icon: '⊕' },
+   // { id: 'roi-calculator', label: 'ROI Calculator', icon: '🧮' },
+    //{ id: 'econ-dashboard', label: 'Econ Dashboard', icon: '⊕' },
 ];
 
 export default function Sidebar({ activeNav, onNavChange }) {
     return (
         <aside className="sidebar">
             <div className="sidebar-brand">
-                <div className="sidebar-brand-icon">🧬</div>
-                <h1>AgriIntel</h1>
+                <div className="sidebar-brand-icon">🌿</div>
+                <h1>LeafNetwork</h1>
                 <p>Multi-Agent Platform</p>
             </div>
 
